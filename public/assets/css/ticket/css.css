@@ -1,0 +1,178 @@
+
+body{
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom:5%;
+    
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Cambio aquí */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    top: -15%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    width: 10%;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+h2 {
+    
+    margin-bottom: 20px;
+    color: #333;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+.containerss {
+    display: flex;
+  
+  }
+  .total-label {
+    margin-right: 1px;
+    margin-top: 10px;
+  }
+input.total{
+    background-color: #ffffff; /* Cambia el color de fondo */
+    font-weight: bold; /* Hace el texto en negrita */
+    border: none; /* Quita el borde */
+    width: 50%;
+    padding: 10px;
+    pointer-events: none; /* Evita acciones de puntero */
+}
+
+input[type="text"]:not(.total),
+input[type="number"]:not(.total){
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+button[type="submit"] {
+  
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#conceptoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;  /* Esta línea agrega una separación entre los conceptos */
+}
+.concepto-group {
+    flex: 1 0 21em;  /* Ajusta este valor según el tamaño que desees para cada grupo de concepto */
+    margin: 0.5em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+}
+
+/* Estilo base del checkbox */
+input[type="checkbox"] {
+    appearance: none; /* Oculta el estilo predeterminado del checkbox */
+    width: 24px; /* Ancho deseado del checkbox */
+    height: 24px; /* Altura deseada del checkbox */
+    position: relative;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+}
+
+/* Estilo del contenedor del checkbox (el cuadro que lo rodea) */
+input[type="checkbox"]::before {
+    content: ""; /* Necesario para que los pseudo-elementos se muestren */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Color de fondo del checkbox */
+    border: 2px solid #ccc; /* Borde del checkbox */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: background-color 0.3s, border-color 0.3s; /* Transición suave del color de fondo y del borde */
+}
+
+/* Estilo del tick (la palomita) que aparece cuando el checkbox está marcado */
+input[type="checkbox"]::after {
+    content: "\2713"; /* Carácter Unicode para la palomita (tick) */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Arial', sans-serif; /* Fuente para el tick */
+    font-size: 18px; /* Tamaño de la fuente del tick */
+    color: #007bff; /* Color del tick */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s; /* Transición suave de la opacidad */
+}
+
+
+/* Muestra la palomita cuando el checkbox está marcado */
+input[type="checkbox"]:checked::after {
+    opacity: 1; /* Muestra la palomita cuando el checkbox está marcado */
+}
+
+#suggestions {
+    margin-top: 3px; /* Espacio superior */
+    padding: 3px; /* Espacio interno */
+    background-color: #00c8ff; /* Color de fondo */
+    border: 1px solid greenyellow; /* Borde */
+    border-radius: 7px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 90%;
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
